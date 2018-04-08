@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "burris415nodeproject",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpecialTim/BurrisAssignment415.git"
+  },
+  "author": "Timothy Thibodaux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SpecialTim/BurrisAssignment415/issues"
+  },
+  "homepage": "https://github.com/SpecialTim/BurrisAssignment415#readme",
+  "description": "",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "express": "^4.16.3"
+  }
+}
