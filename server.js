@@ -3,13 +3,13 @@ var chalk = require('chalk');
 var app = express();
 var router = express.Router();
 
-router.get('/emr', function(req, res) {
+router.get('rest/emr', function(req, res) {
     res.status(200).send('all of emr details');
 });
-router.get('/emr/id', function(req, res) {
+router.get('rest/emr/id', function(req, res) {
     res.status(200).send('emr id');
 });
-router.post('/emr', function(req, res) {
+router.post('rest/emr', function(req, res) {
     res.status(200).send('Hello world');
 });
 
