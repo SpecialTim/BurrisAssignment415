@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <h4>Menu</h4>
+    <div>
+        <li>
+            <a href = "/rest/">Index</span></a>
+            <a href = "/rest/emr/">Create EMR</a>
+            
+        </li>
+    </div>
+</head>
+
+<body>
+     <div>
+        <h2>All EMR:</h2>
+        <ul>
+            <% for (i in emrList) {%>
+                <li><%= emrList[i].id %> --- <%= emrList[i].name%> --- <%= emrList[i].address%></li>
+            <%}%>
+        </ul>
+    </div>
+
+</body>
+
+</html>
