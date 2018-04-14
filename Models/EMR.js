@@ -1,4 +1,4 @@
-var listOfEMR = {}
+var listOfEMR = []
 function EMR (id,name,address){
     var self = {}
     self.id = id,
@@ -26,11 +26,11 @@ module.exports.getEMRById = (id) => {
 module.exports.createEMR = (name,address) => {
     let id = listLength()
     var emr = new EMR(id,name,address)
-    listOfEMR[emr.id] = emr
+    listOfEMR.push(emr)
 }
 
 module.exports.deleteEMR = (emr) => {
-    delete listOfEMR[emr.id]
+    listOfEMR.pop(emr.id)
 }
 
 module.exports.getList = () => {
