@@ -1,38 +1,9 @@
-var listOfEMR = []
-function EMR (id,name,address){
-    var self = {}
-    self.id = id,
-    self.name = name,
-    self.address = address
-    return self
-}
+const rest = require('node-restful')
+const mongoose = rest.mongoose
 
-function listLength(){
-    let length = 0
-    for (i in listOfEMR){
-        length++
-    }
-    return length
-}
+let emrSchema = new mongoose.Schema({
+    name: String,
+    address: String
+})
 
-module.exports.getListLength = () => {
-    return listLength()
-}
-
-module.exports.getEMRById = (id) => {
-    return listOfEMR[id]
-} 
-
-module.exports.createEMR = (name,address) => {
-    let id = listLength()
-    var emr = new EMR(id,name,address)
-    listOfEMR.push(emr)
-}
-
-module.exports.deleteEMR = (emr) => {
-    listOfEMR.pop(emr.id)
-}
-
-module.exports.getList = () => {
-    return listOfEMR
-}
+module.exports = rest.model('emrs', emrSchema)
